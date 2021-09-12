@@ -1,13 +1,13 @@
 const runSpeechRecognition=()=> {
-    // get output div reference
+    // get convert button reference
     var output = document.getElementById("convert");
     // get action element reference
     var action = document.getElementById("action");
     // new speech recognition object
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
     var recognition = new SpeechRecognition();
-
-    // This runs when the speech recognition service starts
+    
+    //runs on start of speech recognition
     recognition.onstart = function() {
         action.innerHTML = "<small>listening, please speak...</small>";
     };
@@ -23,12 +23,9 @@ const runSpeechRecognition=()=> {
         var confidence = event.results[0][0].confidence;
         let result = document.getElementById("text");
         result.value = transcript;
-        // output.innerHTML = "<b>Text:</b> " + transcript + "<br/> <b>Confidence:</b> " + confidence*100+"%";
         output.style.display="block";
     };
   
      // start recognition
      recognition.start();
 }
-
-module.exports = results;
