@@ -10,8 +10,8 @@ A simple web application using AI based cognitive services for translation, spee
     
 # Before you start
 - I urge you to use a Virtual Environment while working on a flask project in order to avoid controvercies between versions of various dependencies used in a project. To know how to, follow https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/ 
-- All the required dependencies are listed in requirements.text file. In order to install them run the command ```pip install -r requirements.txt```
-- Now create a ```.env``` file with the following details:
+- All the required dependencies are listed in requirements.text file. In order to install them, just run the command ```pip install -r requirements.txt```
+- Now create a ```.env``` file in the outermost directory with the following details:
 ```
 API_KEY=<api key from MS Azure Translator>
 ENDPOINT=https://api.cognitive.microsofttranslator.com/
