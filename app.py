@@ -1,9 +1,8 @@
 from flask import Flask, redirect, url_for, request, render_template, session
 from ibm_watson import TextToSpeechV1
-from ibm_watson.websocket import RecognizeCallback, AudioSource 
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 import requests, os, uuid, json
-# import pyaudio
+
 from dotenv import load_dotenv
 load_dotenv()
 
